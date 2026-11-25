@@ -515,7 +515,8 @@ scenario(
 scenario(
     "teasel-croft", "hidden_clause", ["outside_air_section", "dearer_option"],
     "There were violent protests outside my hotel last night and I don't feel safe here. Please get me on the first "
-    "flight back to Heathrow today. My manager is on leave and I can't reach anyone to approve it.",
+    "flight back to Heathrow today; it's 06:30 here now. My manager is on leave and I can't reach anyone to approve "
+    "it.",
     trip(traveller_name="Joseph Kariuki", traveller_title="Fisheries Science Adviser", origin="IST", destination="LHR",
          travel_date="2026-12-04", booking_date="2026-12-04", business_starts="2026-12-07 09:00",
          purpose="Return to London from the Black Sea fisheries meeting in Istanbul", purpose_kind="RETURN_FROM_DUTY",
@@ -529,7 +530,8 @@ scenario(
         offer("british-economy", "british", "ECONOMY", 27400),
         offer("turkish-late-economy", "turkish-late", "ECONOMY", 21800),
     ]),
-    expected("BOOK", ["turkish-early-economy"], ["ECONOMY"], ["TRAVELLER_SAFETY"], ON_FILE, ["AIR", "PRINCIPLES"]),
+    expected("BOOK", ["turkish-early-economy"], ["ECONOMY"], ["TRAVELLER_SAFETY"], ON_FILE,
+             ["AIR", "PRINCIPLES", "RAIL_AND_AIR"]),
     [SAFETY, PRIOR, UNDER],
     "Line 195 needs prior approval for all air travel, but lines 92-98: where employees feel unsafe and it is not "
     "practical to seek prior approval before taking additional steps, approval can be obtained retrospectively. The "
@@ -678,7 +680,7 @@ scenario(
     [UNDER, BETWEEN, LOWEST, PRIOR, OUTSIDE],
     "Both itineraries connect: the flights add up to 205 minutes, but from first departure to last arrival the journey "
     "takes 320 (Frankfurt) or 315 (Amsterdam) minutes. The handbook does not say how a journey is measured. By flying "
-    "time it is under 5 hours and economy only (line 204); door to door it is between 5 and 10 hours and the traveller "
+    "time it is under 5 hours and economy only (line 204); from first departure to last arrival it is between 5 and 10 hours and the traveller "
     "works on arrival, so business may be bought (lines 205-209). Hold either reading's fare.",
     flag_twins=["nightjar-holm", "ouzel-scarp"],
     ambiguity={"phrase": "Air travel for journeys of less than 5 hours should be via economy class only.",

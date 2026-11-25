@@ -75,8 +75,9 @@ LIMITS = {rule["name"]: (rule["minutes"], rule["operator"]) for rule in DURATION
 FIVE_HOURS = 300
 TEN_HOURS = 600
 
-# Handbook-specific conventions shown by booking_requirements, beyond the template's (none here).
-CONVENTIONS = ()
+# Handbook-specific conventions shown by booking_requirements, beyond the template's. The task instructions
+# carry the same sentence, so no reader counts airport transfers into a journey (the world has none).
+CONVENTIONS = ("No time is counted for getting to or from an airport: a nonstop flight's length is its scheduled minutes.",)
 
 # Lines 180-181: air travel between locations on mainland England, Wales and Scotland. The shared world's airports
 # there (Northern Ireland, the islands and Ireland are not mainland Great Britain).
@@ -240,7 +241,7 @@ def safety(trip, seated):
     first = min(offer.segments[0].depart_utc for offer in economy_offers)
     earliest = [offer for offer in economy_offers if offer.segments[0].depart_utc == first]
     return answer(Decision.BOOK, earliest, [ReasonCode.TRAVELLER_SAFETY], [Approver.NONE, Approver.MANAGER],
-                  [Clause.PRINCIPLES, Clause.AIR],
+                  [Clause.PRINCIPLES, *AIR_CLAUSES],
                   "Lines 92-98: the traveller feels unsafe and the line manager cannot be reached, so prior approval "
                   "(line 195) is not practical and approval can be obtained retrospectively: book the first flight out, "
                   "in economy (line 204: under 5 hours).")
@@ -372,7 +373,7 @@ def business(trip, seated, manager, asked_first):
                       [*AIR_CLAUSES, Clause.PRINCIPLES],
                       "Lines 204-210: the flights add up to less than 5 hours, but with the connection the journey takes "
                       "more than 5 hours. The text does not say how a journey is measured: by flying time it is economy "
-                      "only (line 204); door to door the traveller's case allows business class (lines 205-209). "
+                      "only (line 204); from first departure to last arrival the traveller's case allows business class (lines 205-209). "
                       "Hold the business fare (or the economy fare of the other reading).", phrase=JOURNEY_PHRASE)
     if where in ("between", "ten"):
         if where == "ten" and cases:

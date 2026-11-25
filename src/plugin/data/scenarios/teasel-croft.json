@@ -9,7 +9,7 @@
   "twin_fact": "",
   "flag_twins": [],
   "ambiguity_note": "none",
-  "request": "There were violent protests outside my hotel last night and I don't feel safe here. Please get me on the first flight back to Heathrow today. My manager is on leave and I can't reach anyone to approve it.",
+  "request": "There were violent protests outside my hotel last night and I don't feel safe here. Please get me on the first flight back to Heathrow today; it's 06:30 here now. My manager is on leave and I can't reach anyone to approve it.",
   "trip": {
     "traveller_name": "Joseph Kariuki",
     "traveller_title": "Fisheries Science Adviser",
@@ -101,7 +101,8 @@
     ],
     "clauses": [
       "AIR",
-      "PRINCIPLES"
+      "PRINCIPLES",
+      "RAIL_AND_AIR"
     ],
     "unclear_phrase": ""
   },

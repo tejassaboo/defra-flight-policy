@@ -188,5 +188,5 @@
     }
   ],
   "distractors": [],
-  "design_notes": "Both itineraries connect: the flights add up to 205 minutes, but from first departure to last arrival the journey takes 320 (Frankfurt) or 315 (Amsterdam) minutes. The handbook does not say how a journey is measured. By flying time it is under 5 hours and economy only (line 204); door to door it is between 5 and 10 hours and the traveller works on arrival, so business may be bought (lines 205-209). Hold either reading's fare."
+  "design_notes": "Both itineraries connect: the flights add up to 205 minutes, but from first departure to last arrival the journey takes 320 (Frankfurt) or 315 (Amsterdam) minutes. The handbook does not say how a journey is measured. By flying time it is under 5 hours and economy only (line 204); from first departure to last arrival it is between 5 and 10 hours and the traveller works on arrival, so business may be bought (lines 205-209). Hold either reading's fare."
 }
