@@ -1,5 +1,7 @@
 # Defra Flight Policy
 
+**Source of the handbook:** https://www.contractsfinder.service.gov.uk/Notice/Attachment/a8d95d45-a849-47bd-937a-c1095f833b14. The agent reads it verbatim (bundled at `src/plugin/data/policy.txt`); flights, fares and trips are synthetic.
+
 **No affiliation with the Department for Environment, Food and Rural Affairs.** The handbook is the department's
 *Staff Expense (Travel & Subsistence) Policy* v2.0 (published August 2021), a PDF released with a UK Contracts Finder
 notice and marked "Classification: OFFICIAL" (unrestricted), bundled verbatim for research. Its public URL is not
