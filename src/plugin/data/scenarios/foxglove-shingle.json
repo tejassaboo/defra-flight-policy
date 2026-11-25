@@ -1,0 +1,147 @@
+{
+  "id": "foxglove-shingle",
+  "category": "easy",
+  "overlays": [
+    "multi_leg",
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Bogota on 9 March for the Andean paramo restoration workshop, which opens on the 11th. Economy, the cheapest please; a connection is fine.",
+  "trip": {
+    "traveller_name": "Owen Llewellyn",
+    "traveller_title": "Peatland Restoration Specialist",
+    "origin": "LHR",
+    "destination": "BOG",
+    "travel_date": "2027-03-09",
+    "booking_date": "2027-02-08",
+    "business_starts": "2027-03-11 09:00",
+    "purpose": "Andean paramo restoration workshop in Bogota",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Bogota for the workshop."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "BOG",
+        "date": "2027-03-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "madrid": {
+            "carrier": "IB",
+            "via": [
+              "MAD"
+            ],
+            "depart": "07:15",
+            "layovers": [
+              95
+            ]
+          },
+          "avianca": {
+            "carrier": "AV",
+            "depart": "13:30"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "14:10"
+          }
+        },
+        "offers": [
+          {
+            "slot": "madrid-economy",
+            "flight": "madrid",
+            "cabin": "ECONOMY",
+            "fare_cents": 58700
+          },
+          {
+            "slot": "madrid-business",
+            "flight": "madrid",
+            "cabin": "BUSINESS",
+            "fare_cents": 312000
+          },
+          {
+            "slot": "avianca-economy",
+            "flight": "avianca",
+            "cabin": "ECONOMY",
+            "fare_cents": 66300
+          },
+          {
+            "slot": "avianca-business",
+            "flight": "avianca",
+            "cabin": "BUSINESS",
+            "fare_cents": 345000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 71900
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "madrid-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Economy asked, connections welcome: the Iberia connection through Madrid is the lowest practical fare (line 187) and lands well before the workshop. Business class over 10 hours (lines 211-212) is not asked for."
+}

@@ -1,0 +1,192 @@
+{
+  "id": "campion-wold",
+  "category": "flag",
+  "overlays": [
+    "multi_leg",
+    "unclear_phrase",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "nightjar-holm",
+    "ouzel-scarp"
+  ],
+  "ambiguity_note": {
+    "phrase": "Air travel for journeys of less than 5 hours should be via economy class only.",
+    "readings": [
+      "a journey is the time in the air: 205 minutes, under 5 hours, so the cheapest economy fare",
+      "a journey runs from first departure to last arrival, the connection included: over 5 hours with work on arrival, so the cheapest business fare"
+    ]
+  },
+  "request": "Edinburgh to Rome on 24 February: I go straight from the airport into the FAO fisheries committee session at 14:30. Business class if the policy allows it; otherwise economy.",
+  "trip": {
+    "traveller_name": "Iain Cameron",
+    "traveller_title": "Sea Fisheries Negotiator",
+    "origin": "EDI",
+    "destination": "FCO",
+    "travel_date": "2027-02-24",
+    "booking_date": "2027-01-27",
+    "business_starts": "2027-02-24 14:30",
+    "purpose": "FAO Committee on Fisheries session in Rome",
+    "purpose_kind": "NEGOTIATION",
+    "requested_cabin": "BUSINESS",
+    "straight_to_work": true,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Rome for the fisheries committee."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "EDI",
+        "destination": "FCO",
+        "date": "2027-02-24",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "frankfurt": {
+            "carrier": "LH",
+            "via": [
+              "FRA"
+            ],
+            "depart": "06:30",
+            "minutes": [
+              105,
+              100
+            ],
+            "layovers": [
+              115
+            ]
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "07:00",
+            "minutes": [
+              80,
+              125
+            ],
+            "layovers": [
+              110
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "frankfurt-economy",
+            "flight": "frankfurt",
+            "cabin": "ECONOMY",
+            "fare_cents": 21800
+          },
+          {
+            "slot": "frankfurt-business",
+            "flight": "frankfurt",
+            "cabin": "BUSINESS",
+            "fare_cents": 68500
+          },
+          {
+            "slot": "amsterdam-economy",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 19600
+          },
+          {
+            "slot": "amsterdam-business",
+            "flight": "amsterdam",
+            "cabin": "BUSINESS",
+            "fare_cents": 72400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "amsterdam-economy",
+      "frankfurt-business"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NOT_NAMED"
+    ],
+    "clauses": [
+      "AIR",
+      "PRINCIPLES",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": "Air travel for journeys of less than 5 hours should be via economy class only."
+  },
+  "must_keep": [
+    {
+      "lines": [
+        204,
+        204
+      ],
+      "sha256": "31c4fbb55cebc6ad7fc1eac1629ab6f616e5286054a001071c26ed4caa535d40",
+      "quote": "Air travel for journeys of less than 5 hours should be via economy class only.",
+      "why": "under 5 hours: economy only"
+    },
+    {
+      "lines": [
+        205,
+        210
+      ],
+      "sha256": "3eec68cb1b01792745db78ef13736fbd6c8e9e6db3b7e65bdc4316e099216e1a",
+      "quote": "For journeys of between 5 hours and 10 hours a business class flight may be purchased where: • bookings are not available in the lower class and the timing or date of the journey cannot be changed • if staff will be required to work immediately on arrival. • on disability/medical grounds.",
+      "why": "5 to 10 hours: business in three listed cases"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    },
+    {
+      "lines": [
+        86,
+        91
+      ],
+      "sha256": "88d29dafb929d1e4cb77264864fb8b9f604b416e74e9efa7f04c039c9d7ace8e",
+      "quote": "2. All travel outside of policy should be avoided where possible and in exceptional circumstances prior approval should be sought from your line management. Line management should ensure that budget holders (usually at Director or Deputy Director level) are aware of instances of travel outside the policy and should ensure that appropriate steps have been taken to ensure that suitable options within the policy have been exhausted and the decision would stand up to public scrutiny",
+      "why": "travel outside the policy needs line management's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Both itineraries connect: the flights add up to 205 minutes, but from first departure to last arrival the journey takes 320 (Frankfurt) or 315 (Amsterdam) minutes. The handbook does not say how a journey is measured. By flying time it is under 5 hours and economy only (line 204); door to door it is between 5 and 10 hours and the traveller works on arrival, so business may be bought (lines 205-209). Hold either reading's fare."
+}

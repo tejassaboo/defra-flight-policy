@@ -1,0 +1,143 @@
+{
+  "id": "gentian-sike",
+  "category": "easy",
+  "overlays": [
+    "multi_leg",
+    "date_arithmetic"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Edinburgh to Paris CDG on 15 December; the OECD environment policy committee meets the next morning at 09:30. Cheapest economy, I don't mind changing planes.",
+  "trip": {
+    "traveller_name": "Fiona MacLeod",
+    "traveller_title": "Environment Economist",
+    "origin": "EDI",
+    "destination": "CDG",
+    "travel_date": "2026-12-15",
+    "booking_date": "2026-11-26",
+    "business_starts": "2026-12-16 09:30",
+    "purpose": "OECD environment policy committee in Paris",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Paris for the OECD committee."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "EDI",
+        "destination": "CDG",
+        "date": "2026-12-15",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "airfrance": {
+            "carrier": "AF",
+            "depart": "08:10"
+          },
+          "amsterdam": {
+            "carrier": "KL",
+            "via": [
+              "AMS"
+            ],
+            "depart": "15:20",
+            "layovers": [
+              70
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "airfrance-economy",
+            "flight": "airfrance",
+            "cabin": "ECONOMY",
+            "fare_cents": 18900
+          },
+          {
+            "slot": "amsterdam-economy",
+            "flight": "amsterdam",
+            "cabin": "ECONOMY",
+            "fare_cents": 14300
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "amsterdam-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        204,
+        204
+      ],
+      "sha256": "31c4fbb55cebc6ad7fc1eac1629ab6f616e5286054a001071c26ed4caa535d40",
+      "quote": "Air travel for journeys of less than 5 hours should be via economy class only.",
+      "why": "under 5 hours: economy only"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        180,
+        181
+      ],
+      "quote": "Air travel between locations on mainland England, Wales and Scotland is not",
+      "why": "Edinburgh to Paris leaves Great Britain"
+    }
+  ],
+  "design_notes": "Edinburgh to Paris is not within mainland Great Britain. The KLM connection lands at 19:50 Paris time on the 15th, the evening before the 09:30 meeting on the 16th, so it is practical and the lowest fare (line 187); under 5 hours on every measure, economy (line 204)."
+}

@@ -1,0 +1,147 @@
+{
+  "id": "vervain-knowe",
+  "category": "distractor",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Rome on 9 February for the FAO forestry committee. Premium economy is only £18 more than economy, which is good value for money, so I'd like that; if the policy doesn't allow it, economy.",
+  "trip": {
+    "traveller_name": "Matthew Osei",
+    "traveller_title": "Forestry Policy Adviser",
+    "origin": "LHR",
+    "destination": "FCO",
+    "travel_date": "2027-02-09",
+    "booking_date": "2027-01-18",
+    "business_starts": "2027-02-09 16:00",
+    "purpose": "FAO forestry committee in Rome",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "PREMIUM_ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Rome for the forestry committee."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "FCO",
+        "date": "2027-02-09",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "morning": {
+            "carrier": "BA",
+            "depart": "08:05"
+          },
+          "noon": {
+            "carrier": "BA",
+            "depart": "11:20"
+          }
+        },
+        "offers": [
+          {
+            "slot": "morning-economy",
+            "flight": "morning",
+            "cabin": "ECONOMY",
+            "fare_cents": 14200
+          },
+          {
+            "slot": "morning-premium",
+            "flight": "morning",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 16000
+          },
+          {
+            "slot": "noon-economy",
+            "flight": "noon",
+            "cabin": "ECONOMY",
+            "fare_cents": 15600
+          },
+          {
+            "slot": "noon-premium",
+            "flight": "noon",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 17400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "morning-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LONG_FLIGHT_CONDITION_NOT_MET",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        204,
+        204
+      ],
+      "sha256": "31c4fbb55cebc6ad7fc1eac1629ab6f616e5286054a001071c26ed4caa535d40",
+      "quote": "Air travel for journeys of less than 5 hours should be via economy class only.",
+      "why": "under 5 hours: economy only"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        220,
+        222
+      ],
+      "quote": "Eurostar Standard Premier is permitted where good value for money can be demonstrated.",
+      "why": "a rail rule on value for money, not a cabin rule for flights"
+    }
+  ],
+  "design_notes": "A 135-minute flight: 'less than 5 hours', so economy class only (line 204); premium economy is declined however small the difference. Value for money permits Eurostar Standard Premier (lines 221-222), a rail rule."
+}

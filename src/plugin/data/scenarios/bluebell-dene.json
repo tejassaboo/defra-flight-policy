@@ -1,0 +1,167 @@
+{
+  "id": "bluebell-dene",
+  "category": "flag",
+  "overlays": [
+    "unclear_phrase"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "hawthorn-ings",
+    "hornbeam-sett"
+  ],
+  "ambiguity_note": {
+    "phrase": "For journeys of between 5 hours and 10 hours",
+    "readings": [
+      "'between' includes 5 hours: the journey is in the 5-10 hour band and the traveller works on arrival, so book the cheapest business fare",
+      "'between' starts after 5 hours: exactly 5 hours is in no band that allows business, so book the cheapest economy fare"
+    ]
+  },
+  "request": "Heathrow to Cairo on 20 January. I go straight from the airport into the Nile water-sharing talks at the ministry, so I'd like business class if the policy allows it; otherwise economy is fine.",
+  "trip": {
+    "traveller_name": "Kwame Asante",
+    "traveller_title": "Water Security Adviser",
+    "origin": "LHR",
+    "destination": "CAI",
+    "travel_date": "2027-01-20",
+    "booking_date": "2026-12-14",
+    "business_starts": "2027-01-20 16:30",
+    "purpose": "Nile water-sharing talks at the Egyptian water ministry",
+    "purpose_kind": "NEGOTIATION",
+    "requested_cabin": "BUSINESS",
+    "straight_to_work": true,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Cairo for the water talks."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "CAI",
+        "date": "2027-01-20",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "07:35",
+            "minutes": [
+              300
+            ]
+          },
+          "egyptair": {
+            "carrier": "MS",
+            "depart": "08:40",
+            "minutes": [
+              300
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 31800
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 142000
+          },
+          {
+            "slot": "egyptair-economy",
+            "flight": "egyptair",
+            "cabin": "ECONOMY",
+            "fare_cents": 28900
+          },
+          {
+            "slot": "egyptair-business",
+            "flight": "egyptair",
+            "cabin": "BUSINESS",
+            "fare_cents": 131500
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "egyptair-business",
+      "egyptair-economy"
+    ],
+    "cabins": [
+      "BUSINESS",
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "UNCLEAR_POLICY_TEXT"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NOT_NAMED"
+    ],
+    "clauses": [
+      "AIR",
+      "PRINCIPLES",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": "For journeys of between 5 hours and 10 hours"
+  },
+  "must_keep": [
+    {
+      "lines": [
+        204,
+        204
+      ],
+      "sha256": "31c4fbb55cebc6ad7fc1eac1629ab6f616e5286054a001071c26ed4caa535d40",
+      "quote": "Air travel for journeys of less than 5 hours should be via economy class only.",
+      "why": "under 5 hours: economy only"
+    },
+    {
+      "lines": [
+        205,
+        210
+      ],
+      "sha256": "3eec68cb1b01792745db78ef13736fbd6c8e9e6db3b7e65bdc4316e099216e1a",
+      "quote": "For journeys of between 5 hours and 10 hours a business class flight may be purchased where: • bookings are not available in the lower class and the timing or date of the journey cannot be changed • if staff will be required to work immediately on arrival. • on disability/medical grounds.",
+      "why": "5 to 10 hours: business in three listed cases"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "300-minute nonstops: exactly 5 hours. Not 'less than 5 hours', so line 204 does not require economy; but the text does not say whether 'between 5 hours and 10 hours' (line 205) includes 5 hours. If it does, the traveller works on arrival and may have business; if not, no line allows business. Hold either reading's fare; line management approves travel outside the policy (lines 86-88)."
+}

@@ -1,0 +1,145 @@
+{
+  "id": "dipper-combe",
+  "category": "easy",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to New York JFK on 2 February for the UN oceans preparatory meeting, which starts the next morning. Occupational health has a letter on file about my back, so I need a business-class seat if the policy allows it; otherwise economy.",
+  "trip": {
+    "traveller_name": "Priya Natarajan",
+    "traveller_title": "Marine Policy Manager",
+    "origin": "LHR",
+    "destination": "JFK",
+    "travel_date": "2027-02-02",
+    "booking_date": "2027-01-05",
+    "business_starts": "2027-02-03 09:00",
+    "purpose": "UN oceans preparatory meeting in New York",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "BUSINESS",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": true,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to New York for the oceans meeting."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "JFK",
+        "date": "2027-02-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "10:15",
+            "minutes": [
+              460
+            ]
+          },
+          "virgin": {
+            "carrier": "VS",
+            "depart": "11:40",
+            "minutes": [
+              465
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 52400
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 248000
+          },
+          {
+            "slot": "virgin-economy",
+            "flight": "virgin",
+            "cabin": "ECONOMY",
+            "fare_cents": 49800
+          },
+          {
+            "slot": "virgin-business",
+            "flight": "virgin",
+            "cabin": "BUSINESS",
+            "fare_cents": 236000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "virgin-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "MEDICAL_NEED"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        205,
+        210
+      ],
+      "sha256": "3eec68cb1b01792745db78ef13736fbd6c8e9e6db3b7e65bdc4316e099216e1a",
+      "quote": "For journeys of between 5 hours and 10 hours a business class flight may be purchased where: • bookings are not available in the lower class and the timing or date of the journey cannot be changed • if staff will be required to work immediately on arrival. • on disability/medical grounds.",
+      "why": "5 to 10 hours: business in three listed cases"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "460 and 465 minutes: between 5 and 10 hours. A business class flight may be purchased on disability/medical grounds (lines 205, 210), and the occupational health letter is on file: the cheapest business fare (line 187)."
+}

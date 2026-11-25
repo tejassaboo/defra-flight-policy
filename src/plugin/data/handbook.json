@@ -1,0 +1,16 @@
+{
+  "id": "defra-flight-policy",
+  "name": "Defra Flight Policy",
+  "slug": "defra",
+  "title": "Defra Staff Expense (Travel & Subsistence) Policy v2.0 (published Aug 2021)",
+  "frozen_file": "defra_policy.txt",
+  "sha256": "28c6750788c2489bc874895866279a1657bfda425815a339b9e42e0a3fe0cc84",
+  "raw_pdf_sha256": "1fd3ebeb4304be5515494c2d7934b7a20a667f2b626a1c1699f81211848f7d3a",
+  "words": 3612,
+  "lines": 468,
+  "source": "not recorded locally (UNVERIFIED); the raw PDF is the pinned copy (obtained from a UK Contracts Finder notice)",
+  "frozen_on": "2026-11-24",
+  "scenario_count": 24,
+  "currency": "GBP",
+  "background_offers": 0
+}

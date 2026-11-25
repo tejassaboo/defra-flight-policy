@@ -1,0 +1,145 @@
+{
+  "id": "nightjar-holm",
+  "category": "boundary_twin",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "ouzel-scarp",
+  "twin_fact": "the session starts on landing (21:30 that evening, straight from the airport) or the next morning",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Dubai on 2 March for the climate finance negotiations. The evening session starts at 21:30 and I'm going there straight from the airport. Business class please if the policy allows it; otherwise economy.",
+  "trip": {
+    "traveller_name": "Samir Choudhury",
+    "traveller_title": "Climate Finance Negotiator",
+    "origin": "LHR",
+    "destination": "DXB",
+    "travel_date": "2027-03-02",
+    "booking_date": "2027-02-01",
+    "business_starts": "2027-03-02 21:30",
+    "purpose": "Climate finance negotiations in Dubai",
+    "purpose_kind": "NEGOTIATION",
+    "requested_cabin": "BUSINESS",
+    "straight_to_work": true,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Dubai for the negotiations."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "DXB",
+        "date": "2027-03-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "emirates": {
+            "carrier": "EK",
+            "depart": "07:45",
+            "minutes": [
+              425
+            ]
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "09:20",
+            "minutes": [
+              425
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "emirates-economy",
+            "flight": "emirates",
+            "cabin": "ECONOMY",
+            "fare_cents": 41200
+          },
+          {
+            "slot": "emirates-business",
+            "flight": "emirates",
+            "cabin": "BUSINESS",
+            "fare_cents": 198000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 44900
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 211000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "emirates-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "WORK_ON_ARRIVAL"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        205,
+        210
+      ],
+      "sha256": "3eec68cb1b01792745db78ef13736fbd6c8e9e6db3b7e65bdc4316e099216e1a",
+      "quote": "For journeys of between 5 hours and 10 hours a business class flight may be purchased where: • bookings are not available in the lower class and the timing or date of the journey cannot be changed • if staff will be required to work immediately on arrival. • on disability/medical grounds.",
+      "why": "5 to 10 hours: business in three listed cases"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "425-minute nonstops: between 5 and 10 hours. The traveller goes from the airport straight into the session, so 'staff will be required to work immediately on arrival' (line 209): the cheapest business fare (line 187)."
+}

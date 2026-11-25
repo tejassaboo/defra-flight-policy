@@ -1,0 +1,156 @@
+{
+  "id": "woodruff-staithe",
+  "category": "flag",
+  "overlays": [
+    "approval_required",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [
+    "kingcup-beck",
+    "merlin-garth"
+  ],
+  "ambiguity_note": "none: an approval is required and missing; the text is clear",
+  "request": "Heathrow to Johannesburg on 23 March for the SADC biodiversity forum, which starts on the 25th. I'd like business class; I've asked my line manager to approve it but she hasn't answered yet.",
+  "trip": {
+    "traveller_name": "Ruth Adebayo",
+    "traveller_title": "Biodiversity Partnerships Manager",
+    "origin": "LHR",
+    "destination": "JNB",
+    "travel_date": "2027-03-23",
+    "booking_date": "2027-02-24",
+    "business_starts": "2027-03-25 09:00",
+    "purpose": "SADC biodiversity forum in Johannesburg",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "BUSINESS",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Johannesburg for the forum."
+      },
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "BUSINESS_CLASS",
+        "outcome": "AWAITED",
+        "note": ""
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "JNB",
+        "date": "2027-03-23",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "18:40",
+            "minutes": [
+              680
+            ]
+          },
+          "southafrican": {
+            "carrier": "SA",
+            "depart": "20:15",
+            "minutes": [
+              690
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 63800
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 342000
+          },
+          {
+            "slot": "southafrican-economy",
+            "flight": "southafrican",
+            "cabin": "ECONOMY",
+            "fare_cents": 59600
+          },
+          {
+            "slot": "southafrican-business",
+            "flight": "southafrican",
+            "cabin": "BUSINESS",
+            "fare_cents": 318000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "FLAG_FOR_APPROVAL",
+    "offer_slots": [
+      "southafrican-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "APPROVAL_REQUIRED",
+      "INTERNATIONAL_LONG_FLIGHT"
+    ],
+    "approvers": [
+      "MANAGER"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        211,
+        212
+      ],
+      "sha256": "121481c16878bc531598319fc65e175221b72015ee7dc2fc3b27d0a0382067fe",
+      "quote": "For journeys of over 10 hours a business class flight may be purchased subject to approval from a manager or approver.",
+      "why": "over 10 hours: business with a manager's or approver's approval"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "680 and 690 minutes: over 10 hours, so a business class flight may be purchased 'subject to approval from a manager or approver' (lines 211-212). The manager approved the air travel but has not answered on business class: hold the cheapest business fare for her approval. Approval required, not 'no compliant offer'."
+}

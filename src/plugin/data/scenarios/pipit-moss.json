@@ -1,0 +1,153 @@
+{
+  "id": "pipit-moss",
+  "category": "multi_rule",
+  "overlays": [],
+  "twin_of": "wagtail-brow",
+  "twin_fact": "the director's answer to the exception: GIVEN or REFUSED",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Edinburgh on 10 December for the Scottish Government fisheries meeting at 14:00. My director has signed off an exception for me to fly because the rail line is closed that week. Cheapest economy please.",
+  "trip": {
+    "traveller_name": "Callum Fraser",
+    "traveller_title": "Fisheries Policy Manager",
+    "origin": "LHR",
+    "destination": "EDI",
+    "travel_date": "2026-12-10",
+    "booking_date": "2026-11-27",
+    "business_starts": "2026-12-10 14:00",
+    "purpose": "Scottish Government fisheries meeting in Edinburgh",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "DIRECTOR",
+        "name": "Margaret Doyle",
+        "subject": "POLICY_EXCEPTION",
+        "outcome": "GIVEN",
+        "note": "Exception granted to fly: the rail line north is closed for engineering works that week."
+      },
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Edinburgh for the fisheries meeting."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "EDI",
+        "date": "2026-12-10",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "early": {
+            "carrier": "BA",
+            "depart": "07:10"
+          },
+          "mid": {
+            "carrier": "BA",
+            "depart": "09:40"
+          },
+          "late": {
+            "carrier": "BA",
+            "depart": "13:00"
+          }
+        },
+        "offers": [
+          {
+            "slot": "early-economy",
+            "flight": "early",
+            "cabin": "ECONOMY",
+            "fare_cents": 9400
+          },
+          {
+            "slot": "mid-economy",
+            "flight": "mid",
+            "cabin": "ECONOMY",
+            "fare_cents": 7800
+          },
+          {
+            "slot": "late-economy",
+            "flight": "late",
+            "cabin": "ECONOMY",
+            "fare_cents": 10600
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "mid-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE",
+      "POLICY_EXCEPTION_APPROVED"
+    ],
+    "approvers": [
+      "DIRECTOR",
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        180,
+        181
+      ],
+      "sha256": "b8e51c6f477c0d4884bedf90cdd1979b883ca7b0639ae536ed8f26a6f04d7505",
+      "quote": "• Air travel between locations on mainland England, Wales and Scotland is not permitted unless approval by exception is granted by a director",
+      "why": "no air travel within mainland England, Wales and Scotland without a director's exception"
+    },
+    {
+      "lines": [
+        182,
+        184
+      ],
+      "sha256": "e1b44900bdf23d3c1c82e2638852217dc54491a4b837c3c285e303ef7479662e",
+      "quote": "• Where travel is unavoidable rail is the preferred means, being lower in carbon emissions than air travel and better value for money, when travel to and from an airport is factored in.",
+      "why": "rail is the preferred means where travel is unavoidable"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "London to Edinburgh is air travel within mainland Great Britain, permitted only with a director's exception (lines 180-181), which is on file, beside the manager's prior approval of the air travel (line 195). Economy only under 5 hours (line 204), at the lowest practical fare (line 187): the 09:40."
+}

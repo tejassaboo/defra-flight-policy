@@ -1,0 +1,159 @@
+{
+  "id": "samphire-dyke",
+  "category": "multi_rule",
+  "overlays": [
+    "multi_leg",
+    "date_arithmetic",
+    "month_end",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Singapore on 30 November: I need to be at the opening session of the wildlife trade enforcement conference at 14:00 on 1 December. Cheapest economy that gets me there in time, please.",
+  "trip": {
+    "traveller_name": "Grace Adeyemi",
+    "traveller_title": "Wildlife Crime Enforcement Lead",
+    "origin": "LHR",
+    "destination": "SIN",
+    "travel_date": "2026-11-30",
+    "booking_date": "2026-11-24",
+    "business_starts": "2026-12-01 14:00",
+    "purpose": "Wildlife trade enforcement conference in Singapore",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Singapore for the enforcement conference."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "SIN",
+        "date": "2026-11-30",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "11:05",
+            "minutes": [
+              790
+            ]
+          },
+          "dubai": {
+            "carrier": "EK",
+            "via": [
+              "DXB"
+            ],
+            "depart": "14:30",
+            "minutes": [
+              425,
+              450
+            ],
+            "layovers": [
+              140
+            ]
+          },
+          "singapore": {
+            "carrier": "SQ",
+            "depart": "20:40",
+            "minutes": [
+              780
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 61500
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 391000
+          },
+          {
+            "slot": "dubai-economy",
+            "flight": "dubai",
+            "cabin": "ECONOMY",
+            "fare_cents": 52800
+          },
+          {
+            "slot": "singapore-economy",
+            "flight": "singapore",
+            "cabin": "ECONOMY",
+            "fare_cents": 58900
+          },
+          {
+            "slot": "singapore-business",
+            "flight": "singapore",
+            "cabin": "BUSINESS",
+            "fare_cents": 405000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "british-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 187: the lowest practical fare. The Emirates connection lands at 15:25 on 1 December (Singapore time) and the Singapore Airlines nonstop at 17:40, both after the 14:00 opening, so neither is practical; the BA nonstop lands at 08:15 on 1 December. The flight crosses from 30 November into 1 December."
+}

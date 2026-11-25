@@ -1,0 +1,154 @@
+{
+  "id": "ragwort-lea",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Mumbai on 16 February for the G20 environment ministers' summit, which opens the next morning. The summit date can't move and I can't travel on any other day. Economy please, but if economy is gone, book what the policy allows.",
+  "trip": {
+    "traveller_name": "Neil Ramsay",
+    "traveller_title": "G20 Environment Sherpa",
+    "origin": "LHR",
+    "destination": "BOM",
+    "travel_date": "2027-02-16",
+    "booking_date": "2027-02-12",
+    "business_starts": "2027-02-17 10:00",
+    "purpose": "G20 environment ministers' summit in Mumbai",
+    "purpose_kind": "CONFERENCE",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Mumbai for the G20 summit."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "BOM",
+        "date": "2027-02-16",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "airindia": {
+            "carrier": "AI",
+            "depart": "09:00",
+            "minutes": [
+              545
+            ]
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "11:20",
+            "minutes": [
+              545
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "airindia-economy",
+            "flight": "airindia",
+            "cabin": "ECONOMY",
+            "fare_cents": 47800,
+            "seats": false
+          },
+          {
+            "slot": "airindia-business",
+            "flight": "airindia",
+            "cabin": "BUSINESS",
+            "fare_cents": 221000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 51200,
+            "seats": false
+          },
+          {
+            "slot": "british-premium",
+            "flight": "british",
+            "cabin": "PREMIUM_ECONOMY",
+            "fare_cents": 98000,
+            "seats": false
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 236000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "airindia-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "NO_ECONOMY_SEATS_URGENT"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        205,
+        210
+      ],
+      "sha256": "3eec68cb1b01792745db78ef13736fbd6c8e9e6db3b7e65bdc4316e099216e1a",
+      "quote": "For journeys of between 5 hours and 10 hours a business class flight may be purchased where: • bookings are not available in the lower class and the timing or date of the journey cannot be changed • if staff will be required to work immediately on arrival. • on disability/medical grounds.",
+      "why": "5 to 10 hours: business in three listed cases"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "545-minute nonstops: between 5 and 10 hours. Every economy and premium economy seat is sold out and the summit fixes the date, so 'bookings are not available in the lower class and the timing or date of the journey cannot be changed' (lines 207-208): business class may be purchased, the cheapest (line 187)."
+}

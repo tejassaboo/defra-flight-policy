@@ -1,0 +1,155 @@
+{
+  "id": "sedum-howe",
+  "category": "hidden_clause",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "I'm in New York this week and fly JFK to Los Angeles on 16 March, going straight from the airport into the California Air Resources Board meeting. Business class if the policy allows it: on this route the airlines sell only economy and what they call first, which the booking agent says is the same seat as business class elsewhere. If it isn't allowed, economy.",
+  "trip": {
+    "traveller_name": "Hannah Brooks",
+    "traveller_title": "Air Quality Policy Adviser",
+    "origin": "JFK",
+    "destination": "LAX",
+    "travel_date": "2027-03-16",
+    "booking_date": "2027-02-22",
+    "business_starts": "2027-03-16 15:30",
+    "purpose": "California Air Resources Board meeting in Los Angeles, on a US visit",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "BUSINESS",
+    "straight_to_work": true,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": true,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: the US visit's flights, including New York to Los Angeles."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "JFK",
+        "destination": "LAX",
+        "date": "2027-03-16",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "american": {
+            "carrier": "AA",
+            "depart": "08:00",
+            "minutes": [
+              370
+            ]
+          },
+          "delta": {
+            "carrier": "DL",
+            "depart": "09:30",
+            "minutes": [
+              375
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "american-economy",
+            "flight": "american",
+            "cabin": "ECONOMY",
+            "fare_cents": 31200
+          },
+          {
+            "slot": "american-first",
+            "flight": "american",
+            "cabin": "FIRST",
+            "fare_cents": 118000
+          },
+          {
+            "slot": "delta-economy",
+            "flight": "delta",
+            "cabin": "ECONOMY",
+            "fare_cents": 29800
+          },
+          {
+            "slot": "delta-first",
+            "flight": "delta",
+            "cabin": "FIRST",
+            "fare_cents": 124000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "american-first"
+    ],
+    "cabins": [
+      "FIRST"
+    ],
+    "reason_codes": [
+      "FIRST_AKIN_TO_BUSINESS",
+      "WORK_ON_ARRIVAL"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        196,
+        203
+      ],
+      "sha256": "463eaafa4f35a8ebf072e410142bf1e7af83fa76f067d5d8865bfc0a733973cd",
+      "quote": "There is a complete ban on first class air travel. In exceptional circumstances, where it is necessary when overseas to take a flight and the higher seat class provided by the airline may be described as \"first class\" but is akin to business class (this situation would be most likely to arise on some overseas internal flights), regardless of the description used by the airline, the higher class may be used in accordance with Defra policy on the use of business class. This exception does not apply to travel where there is a genuine business class as well as first class.",
+      "why": "first class is banned, except an overseas 'first' akin to business where there is no genuine business class"
+    },
+    {
+      "lines": [
+        205,
+        210
+      ],
+      "sha256": "3eec68cb1b01792745db78ef13736fbd6c8e9e6db3b7e65bdc4316e099216e1a",
+      "quote": "For journeys of between 5 hours and 10 hours a business class flight may be purchased where: • bookings are not available in the lower class and the timing or date of the journey cannot be changed • if staff will be required to work immediately on arrival. • on disability/medical grounds.",
+      "why": "5 to 10 hours: business in three listed cases"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 196-203: first class is banned, but overseas, where the higher class an airline calls 'first' is akin to business class and there is no genuine business class (most likely on overseas internal flights), it may be used under the business-class rules. 370 and 375 minutes are between 5 and 10 hours and the traveller works on arrival (line 209), so the business-grade cabin may be bought: the cheapest, American's first (line 187)."
+}

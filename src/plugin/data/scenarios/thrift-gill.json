@@ -1,0 +1,152 @@
+{
+  "id": "thrift-gill",
+  "category": "distractor",
+  "overlays": [],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Dublin on 14 January for the all-island animal health meeting at 13:00. Cheapest economy, please.",
+  "trip": {
+    "traveller_name": "Siobhan Kelly",
+    "traveller_title": "Animal Health Policy Officer",
+    "origin": "LHR",
+    "destination": "DUB",
+    "travel_date": "2027-01-14",
+    "booking_date": "2026-12-17",
+    "business_starts": "2027-01-14 13:00",
+    "purpose": "All-island animal health meeting in Dublin",
+    "purpose_kind": "MEETING",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Dublin for the animal health meeting."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "DUB",
+        "date": "2027-01-14",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "aerlingus-early": {
+            "carrier": "EI",
+            "depart": "07:20"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "08:35"
+          },
+          "aerlingus-late": {
+            "carrier": "EI",
+            "depart": "10:50"
+          }
+        },
+        "offers": [
+          {
+            "slot": "aerlingus-early-economy",
+            "flight": "aerlingus-early",
+            "cabin": "ECONOMY",
+            "fare_cents": 8600
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 9900
+          },
+          {
+            "slot": "aerlingus-late-economy",
+            "flight": "aerlingus-late",
+            "cabin": "ECONOMY",
+            "fare_cents": 7400
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "aerlingus-late-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        204,
+        204
+      ],
+      "sha256": "31c4fbb55cebc6ad7fc1eac1629ab6f616e5286054a001071c26ed4caa535d40",
+      "quote": "Air travel for journeys of less than 5 hours should be via economy class only.",
+      "why": "under 5 hours: economy only"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [
+    {
+      "lines": [
+        180,
+        181
+      ],
+      "quote": "Air travel between locations on mainland England, Wales and Scotland is not",
+      "why": "the ban covers flights within mainland Great Britain, not to Ireland"
+    },
+    {
+      "lines": [
+        182,
+        184
+      ],
+      "quote": "Where travel is unavoidable rail is the preferred means",
+      "why": "a preference, not a ban; there is no rail line to Dublin"
+    }
+  ],
+  "design_notes": "Dublin is not on mainland England, Wales or Scotland, so the ban of lines 180-181 does not apply. Under 5 hours, economy (line 204); the 10:50 lands at 11:50, before the 13:00 meeting: the lowest practical fare (line 187)."
+}

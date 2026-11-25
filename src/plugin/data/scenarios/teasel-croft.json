@@ -1,0 +1,139 @@
+{
+  "id": "teasel-croft",
+  "category": "hidden_clause",
+  "overlays": [
+    "outside_air_section",
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "There were violent protests outside my hotel last night and I don't feel safe here. Please get me on the first flight back to Heathrow today. My manager is on leave and I can't reach anyone to approve it.",
+  "trip": {
+    "traveller_name": "Joseph Kariuki",
+    "traveller_title": "Fisheries Science Adviser",
+    "origin": "IST",
+    "destination": "LHR",
+    "travel_date": "2026-12-04",
+    "booking_date": "2026-12-04",
+    "business_starts": "2026-12-07 09:00",
+    "purpose": "Return to London from the Black Sea fisheries meeting in Istanbul",
+    "purpose_kind": "RETURN_FROM_DUTY",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": false,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": true,
+    "manager_reachable": false,
+    "sign_offs": []
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "IST",
+        "destination": "LHR",
+        "date": "2026-12-04",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "turkish-early": {
+            "carrier": "TK",
+            "depart": "09:10",
+            "minutes": [
+              235
+            ]
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "13:45",
+            "minutes": [
+              240
+            ]
+          },
+          "turkish-late": {
+            "carrier": "TK",
+            "depart": "18:30",
+            "minutes": [
+              235
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "turkish-early-economy",
+            "flight": "turkish-early",
+            "cabin": "ECONOMY",
+            "fare_cents": 32500
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 27400
+          },
+          {
+            "slot": "turkish-late-economy",
+            "flight": "turkish-late",
+            "cabin": "ECONOMY",
+            "fare_cents": 21800
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "turkish-early-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "TRAVELLER_SAFETY"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "PRINCIPLES"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        92,
+        98
+      ],
+      "sha256": "32fa526b8ad16ff3824c97aeffdc0d1fb5e674c360100639899dc07935d8b5de",
+      "quote": "3. Employees should be able to feel safe when travelling on departmental business. We encourage employees to plan for their safety and take all necessary health and safety precautions before and while travelling. A risk assessment process is available for both UK and international travel. We recognise there are times when employees may, for a variety of reasons, feel unsafe when travelling and it is not practical to seek prior approval before taking additional steps. In such cases approval can be obtained retrospectively.",
+      "why": "a traveller who feels unsafe may take further steps and get approval afterwards"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    },
+    {
+      "lines": [
+        204,
+        204
+      ],
+      "sha256": "31c4fbb55cebc6ad7fc1eac1629ab6f616e5286054a001071c26ed4caa535d40",
+      "quote": "Air travel for journeys of less than 5 hours should be via economy class only.",
+      "why": "under 5 hours: economy only"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Line 195 needs prior approval for all air travel, but lines 92-98: where employees feel unsafe and it is not practical to seek prior approval before taking additional steps, approval can be obtained retrospectively. The traveller feels unsafe and no approver can be reached: book the first flight out (09:10), in economy (line 204), though later flights are cheaper."
+}

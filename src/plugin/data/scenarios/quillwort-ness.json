@@ -1,0 +1,167 @@
+{
+  "id": "quillwort-ness",
+  "category": "multi_rule",
+  "overlays": [
+    "dearer_option"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Heathrow to Doha on 26 January. I go from the plane straight to the ministerial working dinner at 20:00 where the food security agreement is negotiated. I'd like first class; if that isn't allowed, book what the policy allows. I have to be at the dinner.",
+  "trip": {
+    "traveller_name": "Eleanor Rhys",
+    "traveller_title": "Lead Negotiator, Food Security",
+    "origin": "LHR",
+    "destination": "DOH",
+    "travel_date": "2027-01-26",
+    "booking_date": "2026-12-29",
+    "business_starts": "2027-01-26 20:00",
+    "purpose": "Food security agreement talks in Doha",
+    "purpose_kind": "NEGOTIATION",
+    "requested_cabin": "FIRST",
+    "straight_to_work": true,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Doha for the food security talks."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "DOH",
+        "date": "2027-01-26",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "qatar": {
+            "carrier": "QR",
+            "depart": "08:00",
+            "minutes": [
+              405
+            ]
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "09:15",
+            "minutes": [
+              405
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "qatar-economy",
+            "flight": "qatar",
+            "cabin": "ECONOMY",
+            "fare_cents": 39800
+          },
+          {
+            "slot": "qatar-business",
+            "flight": "qatar",
+            "cabin": "BUSINESS",
+            "fare_cents": 189000
+          },
+          {
+            "slot": "qatar-first",
+            "flight": "qatar",
+            "cabin": "FIRST",
+            "fare_cents": 342000
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 43600
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 205000
+          },
+          {
+            "slot": "british-first",
+            "flight": "british",
+            "cabin": "FIRST",
+            "fare_cents": 368000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "qatar-business"
+    ],
+    "cabins": [
+      "BUSINESS"
+    ],
+    "reason_codes": [
+      "FIRST_CLASS_BANNED",
+      "UPGRADE_NOT_ELIGIBLE"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        196,
+        203
+      ],
+      "sha256": "463eaafa4f35a8ebf072e410142bf1e7af83fa76f067d5d8865bfc0a733973cd",
+      "quote": "There is a complete ban on first class air travel. In exceptional circumstances, where it is necessary when overseas to take a flight and the higher seat class provided by the airline may be described as \"first class\" but is akin to business class (this situation would be most likely to arise on some overseas internal flights), regardless of the description used by the airline, the higher class may be used in accordance with Defra policy on the use of business class. This exception does not apply to travel where there is a genuine business class as well as first class.",
+      "why": "first class is banned, except an overseas 'first' akin to business where there is no genuine business class"
+    },
+    {
+      "lines": [
+        205,
+        210
+      ],
+      "sha256": "3eec68cb1b01792745db78ef13736fbd6c8e9e6db3b7e65bdc4316e099216e1a",
+      "quote": "For journeys of between 5 hours and 10 hours a business class flight may be purchased where: • bookings are not available in the lower class and the timing or date of the journey cannot be changed • if staff will be required to work immediately on arrival. • on disability/medical grounds.",
+      "why": "5 to 10 hours: business in three listed cases"
+    },
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 196-197: a complete ban on first class air travel; the exception for an airline 'first' akin to business does not apply where there is a genuine business class as well (lines 202-203), and both airlines sell one. The 405-minute flight is between 5 and 10 hours and the traveller works on arrival (line 209), so business class: the cheapest (line 187)."
+}

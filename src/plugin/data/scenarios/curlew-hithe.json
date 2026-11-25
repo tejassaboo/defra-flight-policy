@@ -1,0 +1,145 @@
+{
+  "id": "curlew-hithe",
+  "category": "easy",
+  "overlays": [
+    "upgrade_not_taken"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Please book me Heathrow to Singapore on 12 January for the ASEAN wildlife trade talks, which start on the 14th. Economy is fine, the cheapest one.",
+  "trip": {
+    "traveller_name": "Tom Hargreaves",
+    "traveller_title": "International Wildlife Trade Lead",
+    "origin": "LHR",
+    "destination": "SIN",
+    "travel_date": "2027-01-12",
+    "booking_date": "2026-12-01",
+    "business_starts": "2027-01-14 09:00",
+    "purpose": "ASEAN wildlife trade talks in Singapore",
+    "purpose_kind": "NEGOTIATION",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Gareth Pryce",
+        "subject": "AIR_TRAVEL",
+        "outcome": "GIVEN",
+        "note": "Approved: fly to Singapore for the ASEAN talks."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LHR",
+        "destination": "SIN",
+        "date": "2027-01-12",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "british": {
+            "carrier": "BA",
+            "depart": "11:05",
+            "minutes": [
+              790
+            ]
+          },
+          "singapore": {
+            "carrier": "SQ",
+            "depart": "20:40",
+            "minutes": [
+              780
+            ]
+          }
+        },
+        "offers": [
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 61200
+          },
+          {
+            "slot": "british-business",
+            "flight": "british",
+            "cabin": "BUSINESS",
+            "fare_cents": 389000
+          },
+          {
+            "slot": "singapore-economy",
+            "flight": "singapore",
+            "cabin": "ECONOMY",
+            "fare_cents": 64800
+          },
+          {
+            "slot": "singapore-business",
+            "flight": "singapore",
+            "cabin": "BUSINESS",
+            "fare_cents": 402000
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "BOOK",
+    "offer_slots": [
+      "british-economy"
+    ],
+    "cabins": [
+      "ECONOMY"
+    ],
+    "reason_codes": [
+      "LOWEST_FARE"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "AIR",
+      "RAIL_AND_AIR"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        187,
+        187
+      ],
+      "sha256": "b960fea07fa43c7119d301a00dbd01c6771248cec8a7a86a678a8f9e6754a1e9",
+      "quote": "The lowest practical fare/rate should be selected within the permitted class of travel.",
+      "why": "the lowest practical fare within the permitted class"
+    },
+    {
+      "lines": [
+        211,
+        212
+      ],
+      "sha256": "121481c16878bc531598319fc65e175221b72015ee7dc2fc3b27d0a0382067fe",
+      "quote": "For journeys of over 10 hours a business class flight may be purchased subject to approval from a manager or approver.",
+      "why": "over 10 hours: business with a manager's or approver's approval"
+    },
+    {
+      "lines": [
+        195,
+        195
+      ],
+      "sha256": "ffb09c014bb3f9052392d96c75e31cf7389907be7baf0c8543013d371f4add13",
+      "quote": "All air travel requires prior approval from a manager or approver.",
+      "why": "all air travel needs a manager's or approver's prior approval"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "A journey of over 10 hours could be in business class with approval (lines 211-212), but the traveller asks for the cheapest economy seat: the lowest practical fare (line 187). Both flights land before the talks."
+}

@@ -1,0 +1,120 @@
+{
+  "id": "whinchat-bield",
+  "category": "refusal",
+  "overlays": [
+    "personal_travel",
+    "outside_air_section"
+  ],
+  "twin_of": "",
+  "twin_fact": "",
+  "flag_twins": [],
+  "ambiguity_note": "none",
+  "request": "Can you book me Gatwick to Madrid on 2 April? It's my sister's wedding and my leave is approved. I'll have my laptop with me in case anything comes up at work.",
+  "trip": {
+    "traveller_name": "Laura Bennett",
+    "traveller_title": "Water Quality Analyst",
+    "origin": "LGW",
+    "destination": "MAD",
+    "travel_date": "2027-04-02",
+    "booking_date": "2027-03-08",
+    "business_starts": "2027-04-03 15:00",
+    "purpose": "Sister's wedding in Madrid, on annual leave",
+    "purpose_kind": "PERSONAL",
+    "requested_cabin": "ECONOMY",
+    "straight_to_work": false,
+    "date_fixed": true,
+    "health_letter_on_file": false,
+    "first_is_business_grade": false,
+    "feels_unsafe": false,
+    "manager_reachable": true,
+    "sign_offs": [
+      {
+        "role": "MANAGER",
+        "name": "Helen Ashworth",
+        "subject": "ANNUAL_LEAVE",
+        "outcome": "GIVEN",
+        "note": "Leave approved, 2 to 9 April."
+      }
+    ]
+  },
+  "world": {
+    "searches": [
+      {
+        "name": "main",
+        "origin": "LGW",
+        "destination": "MAD",
+        "date": "2027-04-02",
+        "return_date": "",
+        "background": 0,
+        "flights": {
+          "iberia": {
+            "carrier": "IB",
+            "depart": "09:15"
+          },
+          "british": {
+            "carrier": "BA",
+            "depart": "10:40"
+          }
+        },
+        "offers": [
+          {
+            "slot": "iberia-economy",
+            "flight": "iberia",
+            "cabin": "ECONOMY",
+            "fare_cents": 9800
+          },
+          {
+            "slot": "british-economy",
+            "flight": "british",
+            "cabin": "ECONOMY",
+            "fare_cents": 11200
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "decision": "REFUSE",
+    "offer_slots": [],
+    "cabins": [
+      "NONE"
+    ],
+    "reason_codes": [
+      "OUTSIDE_POLICY_SCOPE",
+      "PERSONAL_TRAVEL_NOT_COVERED"
+    ],
+    "approvers": [
+      "MANAGER",
+      "NONE"
+    ],
+    "clauses": [
+      "INTRODUCTION",
+      "PRINCIPLES",
+      "PURPOSE",
+      "SCOPE"
+    ],
+    "unclear_phrase": ""
+  },
+  "must_keep": [
+    {
+      "lines": [
+        40,
+        43
+      ],
+      "sha256": "d05b1ccf46e05d5b63bf97b1bfa229b4e76cf3402327fd55bbc288ccd298a831",
+      "quote": "All expense claims must adhere to the following two key principles set out in the Civil Service Management Code: 1. Departments and agencies must reimburse staff only for the expenses which they actually and necessarily incur in the course of official business;",
+      "why": "only expenses actually and necessarily incurred in the course of official business"
+    },
+    {
+      "lines": [
+        69,
+        71
+      ],
+      "sha256": "3f6e373c2a717dce6c4cf2734fbe48b288e4bd8dcfbfb97efa92f542611fd5fc",
+      "quote": "The purpose of this Policy is to establish firm ground rules, guiding principles and procedures for incurring travel and subsistence costs in the course of official business and to address the sustainability and environmental issues relating to such travel.",
+      "why": "the policy covers travel in the course of official business"
+    }
+  ],
+  "distractors": [],
+  "design_notes": "Lines 40-43: departments reimburse only expenses actually and necessarily incurred in the course of official business, and the policy covers travel in the course of official business (lines 69-71). A wedding on annual leave is not official business, laptop or not: the department buys no ticket. The manager's leave approval is not an approval of travel."
+}
